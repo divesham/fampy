@@ -72,24 +72,13 @@ li{
   left:-100%;
   width: 200%;
   height: 200%;
-  text-align: center;
+  text-align:center;
   display: block;
-  transform: skewY(45deg) rotate(15deg);
+  transform: skewY(45deg)  rotate(15deg);
+   
   cursor: pointer;
   font-weight: bold;
   font-size: 18px;
-}
-
-.arrow{
-  width:0;
-  height:0;
-  border-left: 15px solid transparent;
-  border-right: 15px solid transparent;
-  border-top : 50px solid #ffdda1;
-  position: absolute;
-  left: 50%;
-  top: 75px;
-  z-index: 1;
 }
 .spin{
    
@@ -115,14 +104,70 @@ text-align: center;
 
  
 }
-.start-rotation{
-  animation: start-rotation 1s ease infinite;
+/* ===================testing================= */
+
+/* ============= */
+.arrow{
+  width:0;
+  height:0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top : 50px solid #ffdda1;
+  position: absolute;
+  left: 50%;
+  top: 75px;
+  z-index: 1;
+   
 }
+
+.arrow-move{
+  width:0;
+  height:0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top : 50px solid #ffdda1;
+  position: absolute;
+  left: 50%;
+  top: 75px;
+  z-index: 1;
+  animation:Clicker 5s ease 0s;
+}
+.start-rotation{
+  animation: start-rotation 5s ease-out 0s;
+  animation-fill-mode: both;
+  
+}
+.stop-rotation:hover{
+  transform: stop-rotation 5s;
+ }
+ @keyframes stop-rotation{
+  
+  100%{
+    transform: rotate(-360deg);
+  }
+ }
 @keyframes start-rotation{
+  0% {
+    transform: rotate(0deg);
+  }
   100%{
     transform: rotate(360deg);
   }
 }
+@keyframes Clicker {
+  0%, 100% {
+    transform:  rotate(0deg)   ;
+  }
+   5%, 10%, 16%, 23%, 31%, 40%, 50%, 61%, 73%, 86% {
+    transform:  rotate(-15deg)  ;
+ 
+  }
+  7.5%, 13%, 20.5%, 27%, 35.5%, 45%, 55.5%, 67%, 79.5% {
+    transform:  rotate(-10deg) ;
+  } 
+}
+
+
 /* .start-rotation{
   animation: start-rotation 1s timing-function delay iteration-count direction fill-mode;
 } */
@@ -137,6 +182,7 @@ text-align: center;
    margin:100px auto;
    
  }
+  
  body{
   background-color: #E5E5E5;
   /* margin:100px auto; */

@@ -4,21 +4,22 @@ import Wheel from './Wheel';
    
 const SpinnerApp =() =>{
     const [rotation, setRotation] = useState({
-        name: 'circle',
+        name: 'circle stop-rotation',
+        arrowState:'arrow',
         action:'spin'
       });
 
     const handleRotation = ()=>{
         console.log('circle start-rotation');
         if(rotation.name == 'circle start-rotation')
-        setRotation({name:'circle stop-rotation',action:'spin'});
+        setRotation({name:'circle stop-rotation',arrowState:'arrow',action:'spin'});
         else
-        setRotation({name:'circle start-rotation',action:'stop'});
+        setRotation({name:'circle start-rotation',arrowState:'arrow-move',action:'stop'});
     }
 
     return(
         <div className="main">
-            <div className="arrow"></div>
+            <div className={rotation.arrowState}></div>
             <Wheel rotation={rotation} />
             <div className="spin" 
             onClick={handleRotation}>Spin</div>

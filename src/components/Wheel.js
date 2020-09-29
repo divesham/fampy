@@ -8,42 +8,42 @@ const Wheel = ({rotation}) =>{
                 <li>
                     <div className = "text"
                      
-                    > 1 </div>
+                    > Better luck next time! </div>
                 </li>
                 <li>
                     <div className = "text"
                    
-                    > 2 </div>
+                    > 2X Savings </div>
                 </li>
                 <li>
                     <div className = "text"
                      
-                    > 3 </div>
+                    >  ₹100 Cashback</div>
                 </li>
                 <li>
                     <div className = "text"
                       
-                    > 4 </div>
+                    >  ₹20 💸 </div>
                 </li>
                 <li>
                     <div className = "text"
                      
-                    > 5 </div>
+                    > ₹50 💸 </div>
                 </li>
                 <li>
                     <div className = "text"
                      
-                    > 6 </div>
+                    > 1.5X Savings</div>
                 </li>
                 <li>
                     <div className = "text"
                     
-                    > 7 </div>
+                    > 2X Savings </div>
                 </li>
                 <li>
                     <div className = "text"
                      
-                    > 8 </div>
+                    > ₹50 💸</div>
                 </li>
                
             </ul>
