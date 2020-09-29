@@ -1,8 +1,11 @@
 import React from 'react';
-
+import Wheel from './Wheel';
 const SpinnerApp =() =>{
     return(
-        <div>Hello</div>
+        <div className="main">
+            <div className="arrow"></div>
+            <Wheel/>
+        </div>
     );
 };
 
